@@ -15,7 +15,7 @@ public class Deck implements CardSource {
         }
     }
 
-    public void shuffle() {
+    public void shuffle(){
         Collections.shuffle(this.aCards);
     }
 
@@ -29,6 +29,9 @@ public class Deck implements CardSource {
     public boolean isEmpty() {
         return this.aCards.isEmpty();
     }
+
+
+    public void sort() {Collections.sort(this.aCards);}
 
     public String toString() {
         StringBuilder result = new StringBuilder();
