@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efc34034-02e1-451b-a002-cbc67102d5e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/DeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/DeckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726157924881</updated>
-      <workItem from="1726157925981" duration="4007000" />
+      <workItem from="1726157925981" duration="4271000" />
     </task>
     <servers />
   </component>

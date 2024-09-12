@@ -28,5 +28,6 @@ public class Card implements Comparable<Card> {
         return this.getRank().ordinal() - pOther.getRank().ordinal();
     }
 }
+//yippe
 
 
