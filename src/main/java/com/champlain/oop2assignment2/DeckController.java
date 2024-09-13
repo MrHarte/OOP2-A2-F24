@@ -24,6 +24,9 @@ public class DeckController {
         this.aDeckTextArea.setText("This does not sort anything yet.");
     }
 
+    /**
+     * Will display each card form the deck
+     */
     @FXML
     protected void onShowButtonClick() {
         this.aDeckTextArea.setText("This does not step through anything yet.");
