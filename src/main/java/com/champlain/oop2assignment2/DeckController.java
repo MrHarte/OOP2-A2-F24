@@ -19,13 +19,18 @@ public class DeckController {
         this.displayDeck();
     }
 
+    /**
+     * Sort the deck by comparing the cards to each other when the "Sort" button is clicked.
+     * After sorting, it updates the display
+     */
     @FXML
     protected void onSortButtonClick() {
-        this.aDeckTextArea.setText("This does not sort anything yet.");
+        this.aDeck.sort();
+        this.displayDeck();
     }
 
     /**
-     * Will display each card form the deck
+     *
      */
     @FXML
     protected void onShowButtonClick() {
