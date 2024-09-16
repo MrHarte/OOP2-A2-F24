@@ -30,14 +30,15 @@ public class DeckController {
     }
 
     /**
-     *
+     * Handles the event when the "Show" button is clicked.
+     * This method triggers the display of the current deck of cards.
      */
     @FXML
     protected void onShowButtonClick() {
-        this.aDeckTextArea.setText("This does not step through anything yet.");
+        this.aDeck.show();
     }
 
-    private void displayDeck () {
+    private void displayDeck() {
         this.aDeckTextArea.setText(this.aDeck.toString());
     }
 }

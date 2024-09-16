@@ -1,11 +1,17 @@
 package com.champlain.oop2assignment2;
 
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
-
-public class Deck implements CardSource {
+/**
+ * This class represents a deck of cards.
+ * It implements {@link CardSource} and {@link Iterable} to provide card-related functionality.
+ */
+public class Deck implements CardSource, Iterable<Card> {
     /**
      * This is a final list that holds all the {@link Card} objects in the {@code Deck}.
      */
@@ -35,11 +41,22 @@ public class Deck implements CardSource {
         Collections.sort(this.aCards);
     }
 
+    /**
+     * Draws a card from the deck.
+     * Removes and returns the last {@link Card} from the deck.
+     *
+     * @return the drawn {@link Card}
+     * @throws IllegalStateException if the deck is empty
+     */
     public Card draw() {
-        int last = this.aCards.size() - 1;
-        Card myCard = this.aCards.get(last);
-        this.aCards.remove(last);
-        return myCard;
+        if (isEmpty()) {
+            throw new IllegalStateException("The Deck is empty");
+        } else {
+            int last = this.aCards.size() - 1;
+            Card myCard = this.aCards.get(last);
+            this.aCards.remove(last);
+            return myCard;
+        }
     }
 
     public boolean isEmpty() {
@@ -52,5 +69,27 @@ public class Deck implements CardSource {
             result.append(currentCard.toString()).append("\n");
         }
         return result.toString();
+    }
+
+    /**
+     * Shows a confirmation alert for each card in the list.
+     * Goes through all the cards and shows an alert with the card's details.
+     */
+    public void show() {
+        for (Card card : this) {
+            Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION, card.toString());
+            confirmation.showAndWait();
+        }
+    }
+
+    /**
+     * Returns an iterator over the cards in the deck.
+     *
+     * @return an {@link Iterator} of {@link Card}
+     * @Override This overrides the iterator() method from the Iterable interface.
+     */
+    @Override
+    public Iterator<Card> iterator() {
+        return aCards.iterator();
     }
 }
