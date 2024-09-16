@@ -21,6 +21,7 @@ public class DeckController {
 
     @FXML
     protected void onSortButtonClick() {
+
         this.aDeckTextArea.setText("This does not sort anything yet.");
     }
 

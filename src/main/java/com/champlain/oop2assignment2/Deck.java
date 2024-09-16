@@ -1,8 +1,9 @@
 package com.champlain.oop2assignment2;
-
+import java.util.Iterator;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.*;
+
 
 public class Deck implements CardSource {
     private final List<Card> aCards = new ArrayList<>();
@@ -36,5 +37,14 @@ public class Deck implements CardSource {
             result.append(currentCard.toString()).append("\n");
         }
         return result.toString();
+    }
+
+    private static void sort(List<Card> aCards) {
+        Collection.sort(aCards, new SuitFirstComparator());
+        Collection.sort(aCards, new RankFirstComparator());
+    }
+
+    public Iterator<Card> getCards(){
+        return this.aCards.iterator();
     }
 }
