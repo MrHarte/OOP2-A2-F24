@@ -25,6 +25,10 @@ public class Deck implements CardSource {
         this.aCards.remove(last);
         return myCard;
     }
+    //Samantha
+    public void sort(){
+        Collections.sort(this.aCards);
+    }
 
     public boolean isEmpty() {
         return this.aCards.isEmpty();
