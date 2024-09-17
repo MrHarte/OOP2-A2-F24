@@ -1,6 +1,7 @@
 package com.champlain.oop2assignment2;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 
 public class DeckController {
@@ -19,6 +20,11 @@ public class DeckController {
         this.displayDeck();
     }
 
+    /**
+     * used sort method from the deck class and displays it with the
+     * displayDeck method.
+     * @author Samantha
+     */
     @FXML
     protected void onSortButtonClick() {
         //changed this
@@ -26,9 +32,17 @@ public class DeckController {
         this.displayDeck();
     }
 
+    /**
+     * goes through each card in the aDeck and creates an information
+     * alert that displays the card
+     */
     @FXML
     protected void onShowButtonClick() {
-        
+        for (Card aCard : aDeck) {
+            String message = "Card: " + aCard;
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
+            alert.showAndWait();
+        }
     }
 
     private void displayDeck () {

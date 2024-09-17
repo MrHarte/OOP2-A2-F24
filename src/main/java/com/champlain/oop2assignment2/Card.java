@@ -29,17 +29,22 @@ public class Card implements Comparable<Card> {
     }
 
     //Samantha
-    public int compareTo(Card pOther) {
-        return aSuit.compareTo(pOther.aSuit);
-        //return aRank.compareTo(pOther.aRank);
-    }
-    private void showAlert(Card card) {
-        // Create the message to be displayed in the alert
-        String message = "Card: " + card;
 
-        // Display the alert using JavaFX's Alert
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, message, ButtonType.OK);
-        alert.setTitle("Card Alert");
-        alert.setHeaderText(null);
-        alert.showAndWait();
-}}
+    /**
+     *
+     * @param pOther the object to be compared.
+     * @return aSuit that was compared to the other suit
+     */
+    public int compareTo(Card pOther) {
+       // return aSuit.compareTo(pOther.aSuit);
+       // return this.getSuit().ordinal() - pOther.getSuit().ordinal();
+        // Compare by Suit first
+        int rankComparison = this.aSuit.compareTo(pOther.aSuit);
+        if (rankComparison != 0) {
+            return rankComparison;
+        }
+
+        // If Suit are the same, compare by Rank
+        return this.aRank.compareTo(pOther.aRank);
+    }
+    }

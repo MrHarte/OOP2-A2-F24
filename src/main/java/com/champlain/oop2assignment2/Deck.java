@@ -1,11 +1,14 @@
 package com.champlain.oop2assignment2;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Deck implements CardSource {
+public class Deck implements CardSource, Iterable<Card> {
     private final List<Card> aCards = new ArrayList<>();
 
     public Deck() {
@@ -15,6 +18,7 @@ public class Deck implements CardSource {
             }
         }
     }
+
 
     public void shuffle() {
         Collections.shuffle(this.aCards);
@@ -27,8 +31,19 @@ public class Deck implements CardSource {
         return myCard;
     }
     //Samantha
+
+
     public void sort(){
         Collections.sort(this.aCards);
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public Iterator<Card> iterator() {
+        return aCards.iterator();
     }
 
 
