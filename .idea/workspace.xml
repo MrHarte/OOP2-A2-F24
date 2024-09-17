@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b59547da-7c1b-449b-8831-0c37f19fa653" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/RankFirstComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/SuitFirstComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/DeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/champlain/oop2assignment2/DeckController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -66,7 +67,7 @@
       <updated>1726497441907</updated>
       <workItem from="1726497442948" duration="27000" />
       <workItem from="1726497648075" duration="14000" />
-      <workItem from="1726497682625" duration="2574000" />
+      <workItem from="1726497682625" duration="5776000" />
     </task>
     <servers />
   </component>

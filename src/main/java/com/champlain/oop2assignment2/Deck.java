@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
-
+import java.util.Collections;
 
 public class Deck implements CardSource {
     private final List<Card> aCards = new ArrayList<>();
@@ -39,7 +39,7 @@ public class Deck implements CardSource {
         return result.toString();
     }
 
-    private static void sort(List<Card> aCards) {
+    private void sort() (Collections aCards) {
         Collection.sort(aCards, new SuitFirstComparator());
         Collection.sort(aCards, new RankFirstComparator());
     }
