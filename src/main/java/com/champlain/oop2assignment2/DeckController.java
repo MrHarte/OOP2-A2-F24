@@ -28,7 +28,7 @@ public class DeckController {
 
     @FXML
     protected void onShowButtonClick() {
-        this.aDeckTextArea.setText("This does not step through anything yet.");
+        
     }
 
     private void displayDeck () {

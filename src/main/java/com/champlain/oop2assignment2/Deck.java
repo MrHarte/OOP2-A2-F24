@@ -2,6 +2,7 @@ package com.champlain.oop2assignment2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Deck implements CardSource {
@@ -29,6 +30,8 @@ public class Deck implements CardSource {
     public void sort(){
         Collections.sort(this.aCards);
     }
+
+
 
     public boolean isEmpty() {
         return this.aCards.isEmpty();
