@@ -36,9 +36,13 @@ public class Card implements Comparable<Card> {
      * @param pOther The card to be compared with this card.
      * @return A negative integer, zero, or a positive integer as this card
      * is compared to the specified card.
+     * @throws IllegalStateException if the specified card is {@code null}.
      */
     @Override
     public int compareTo(Card pOther) {
+        if(pOther == null) {
+            throw new IllegalStateException();
+        }
         int result =this.getSuit().ordinal()- pOther.getSuit().ordinal();
 
         if (result == 0) {
