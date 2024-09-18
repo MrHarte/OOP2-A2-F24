@@ -33,11 +33,10 @@ public class Card implements Comparable<Card> {
     /**
      *
      * @param pOther the object to be compared.
-     * @return aSuit that was compared to the other suit
+     * @return rank comparison variable first, to check if they're in same suit
+     * if so it then compares the rank of the card
      */
     public int compareTo(Card pOther) {
-       // return aSuit.compareTo(pOther.aSuit);
-       // return this.getSuit().ordinal() - pOther.getSuit().ordinal();
         // Compare by Suit first
         int rankComparison = this.aSuit.compareTo(pOther.aSuit);
         if (rankComparison != 0) {

@@ -34,7 +34,7 @@ public class DeckController {
 
     /**
      * goes through each card in the aDeck and creates an information
-     * alert that displays the card
+     * alert that displays the cards one by one.
      */
     @FXML
     protected void onShowButtonClick() {

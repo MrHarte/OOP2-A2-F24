@@ -30,16 +30,20 @@ public class Deck implements CardSource, Iterable<Card> {
         this.aCards.remove(last);
         return myCard;
     }
-    //Samantha
 
 
+    /**
+     * uses the comparable in java to sort all the cards, first by suit, then rank
+     * see method compareTo in class Deck to see how it is sorted.
+     * @author Samantha
+     */
     public void sort(){
         Collections.sort(this.aCards);
     }
 
     /**
-     *
-     * @return
+     * method that uses an iterator for the type cards
+     * @return an iterator for the list called aCards
      */
     @Override
     public Iterator<Card> iterator() {
