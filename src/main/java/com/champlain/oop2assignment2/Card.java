@@ -25,7 +25,7 @@ public class Card implements Comparable<Card> {
     }
     @Override
     public int compareTo(Card pOther) {
-        return this.getRank().ordinal() - pOther.getRank().ordinal();
+        return this.getSuit().ordinal() - pOther.getSuit().ordinal();
     }
 }
 //yippe
