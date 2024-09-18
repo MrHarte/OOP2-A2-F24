@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.*;
 import java.util.Collections;
 
-public class Deck implements CardSource {
+public class Deck implements CardSource, Iterable<Card> {
     private final List<Card> aCards = new ArrayList<>();
 
     public Deck() {
@@ -15,6 +15,7 @@ public class Deck implements CardSource {
             }
         }
     }
+
 
     public void shuffle() {
         Collections.shuffle(this.aCards);
@@ -39,12 +40,16 @@ public class Deck implements CardSource {
         return result.toString();
     }
 
-    private void sort() (Collections aCards) {
-        Collection.sort(aCards, new SuitFirstComparator());
-        Collection.sort(aCards, new RankFirstComparator());
-    }
+    public void sort(){Collections.sort(this.aCards);}
 
-    public Iterator<Card> getCards(){
+
+
+
+
+    @Override
+    public Iterator<Card> iterator() {
         return this.aCards.iterator();
     }
 }
+
+
