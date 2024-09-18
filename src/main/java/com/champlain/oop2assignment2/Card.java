@@ -23,6 +23,12 @@ public class Card implements Comparable<Card> {
         return this.aRank + " of " + this.aSuit;
 
     }
+    /**
+     * This methode get the class rank and compare all the card in the deck. It does this by
+     * subtrating each cards and then putting it in ordinal order
+     * @param pOther deck in ordinal order, smallest to biggest
+     * @return all the cards in ordinal order
+     */
     @Override
     public int compareTo(Card pOther) {
         return this.getSuit().ordinal() - pOther.getSuit().ordinal();

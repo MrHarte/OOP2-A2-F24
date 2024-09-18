@@ -44,8 +44,12 @@ public class Deck implements CardSource, Iterable<Card> {
         return result.toString();
     }
 
+    /**
+     * This method will create an Iterator card
+     * @return iterator over the internal list of cards
+     */
     @Override
     public Iterator<Card> iterator() {
-        return this.aCards.iterator(); // Return an iterator over the internal list of cards
+        return this.aCards.iterator();
     }
 }
