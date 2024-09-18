@@ -34,7 +34,7 @@ public class Deck implements CardSource, Iterable<Card> {
 
     /**
      * uses the comparable in java to sort all the cards, first by suit, then rank
-     * see method compareTo in class Deck to see how it is sorted.
+     * see method compareTo in class Card to see how it is sorted.
      * @author Samantha
      */
     public void sort(){

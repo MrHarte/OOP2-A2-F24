@@ -28,8 +28,6 @@ public class Card implements Comparable<Card> {
         return this.aRank + " of " + this.aSuit;
     }
 
-    //Samantha
-
     /**
      *
      * @param pOther the object to be compared.
