@@ -12,7 +12,7 @@ public class DeckApplication extends Application {
     public void start(Stage pStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DeckApplication.class.getResource("deck-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        pStage.setTitle("Hello!");
+        pStage.setTitle("Card Deck");
         pStage.setScene(scene);
         pStage.show();
     }
