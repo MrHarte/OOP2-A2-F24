@@ -30,7 +30,7 @@ public class Card  implements Comparable<Card>{
     }
 
     /**
-     * Compares a card to another card, first by rank, then suit if it is equal.
+     * Compares a card to another card, first by suit, then rank if it is equal.
      * @param otherCard the object to be compared.
      * @return A zero, negative, or positive integer as the card is equal, less than
      * or greater than a specified card.
@@ -38,12 +38,12 @@ public class Card  implements Comparable<Card>{
 
     @Override
     public int compareTo(Card otherCard) {
-        // Compare by rank first
-        int rankComparison = this.aRank.compareTo(otherCard.getRank());
-        if (rankComparison != 0) {
-            return rankComparison;
+        // Compare by suit first
+        int suitComparison = this.aSuit.compareTo(otherCard.getSuit());
+        if (suitComparison != 0) {
+            return suitComparison;
         }
-        // If ranks are equal, compare by suit
-        return this.aSuit.compareTo(otherCard.getSuit());
+        // If suits are equal, compare by rank
+        return this.aRank.compareTo(otherCard.getRank());
     }
 }
