@@ -14,6 +14,7 @@ public class Deck implements CardSource, Iterable<Card> {
 
     /**
      * Constructs a standard deck of cards with all ranks and suits.
+     * @since 9/19/2024 1:16 pm
      */
     public Deck() {
         for (Rank currentRank : Rank.values()) {
