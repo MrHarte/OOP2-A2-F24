@@ -23,7 +23,7 @@ public class Card implements Comparable<Card> {
         return this.aRank + " of " + this.aSuit;
     }
 
-    // This method is for comapring cards
+    // This method is for comparing cards
     public int compareTo(Card other){
 
         int suitComparison = this.aSuit.compareTo(other.aSuit);

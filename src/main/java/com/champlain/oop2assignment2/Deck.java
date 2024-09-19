@@ -3,8 +3,12 @@ package com.champlain.oop2assignment2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Iterator;
+
+import static com.champlain.oop2assignment2.DeckController.cardMessage;
 
 public class Deck implements CardSource {
+
     private final List<Card> aCards = new ArrayList<>();
 
     public Deck() {
@@ -39,7 +43,15 @@ public class Deck implements CardSource {
     }
 
     //method to use sort collection
-    public void sort(){
+    public void sort() {
         Collections.sort(this.aCards);
+    }
+
+    public void ShowCards() {
+        Iterator<Card> itCard = this.aCards.iterator();
+        while (itCard.hasNext()) {
+            Card card = itCard.next();
+            cardMessage(card);
+        }
     }
 }
