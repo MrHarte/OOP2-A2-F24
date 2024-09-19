@@ -1,11 +1,13 @@
 package com.champlain.oop2assignment2;
 
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Iterator;
 
-import static com.champlain.oop2assignment2.DeckController.cardMessage;
+import static com.champlain.oop2assignment2.DeckController.CardMessage;
 
 public class Deck implements CardSource {
 
@@ -44,14 +46,27 @@ public class Deck implements CardSource {
 
     //method to use sort collection
     public void sort() {
-        Collections.sort(this.aCards);
+        if (this.aCards.isEmpty()) {
+            Alert e = new Alert(Alert.AlertType.WARNING);
+            e.setContentText("There are no cards to sort.");
+            e.showAndWait();
+        } else {
+            Collections.sort(this.aCards);
+        }
+
     }
 
     public void ShowCards() {
-        Iterator<Card> itCard = this.aCards.iterator();
-        while (itCard.hasNext()) {
-            Card card = itCard.next();
-            cardMessage(card);
+        if (this.aCards.isEmpty()) {
+            Alert e = new Alert(Alert.AlertType.WARNING);
+            e.setContentText("There are no cards to show.");
+            e.showAndWait();
+        } else {
+            Iterator<Card> itCard = this.aCards.iterator();
+            while (itCard.hasNext()) {
+                Card card = itCard.next();
+                CardMessage(card);
+            }
         }
     }
 }

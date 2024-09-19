@@ -34,10 +34,10 @@ public class DeckController {
         aDeck.ShowCards();
     }
 
-    public static void cardMessage(Card pCard) {
+    public static void CardMessage(Card pCard) {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setContentText(pCard.toString());
-        a.show();
+        a.showAndWait();
     }
 
     private void displayDeck () {
