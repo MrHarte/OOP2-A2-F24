@@ -22,22 +22,37 @@ public class DeckController {
         this.displayDeck();
     }
 
+    /**
+     * Calls the sort method, then calls the displayDeck method.
+     */
     @FXML
     protected void onSortButtonClick() {
-        // this function to call the sort method
         this.aDeck.sort();
         this.displayDeck();
     }
 
+    /**
+     * Calls the showCards method using aDeck.
+     */
     @FXML
     protected void onShowButtonClick() {
-        aDeck.ShowCards();
+        aDeck.showCards();
     }
 
-    public static void CardMessage(Card pCard) {
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setContentText(pCard.toString());
-        a.showAndWait();
+    /**
+     * Takes a card's suit and rank, puts on an alert box, and displays said alert box.
+     * @param pCard The card whose info is being displayed.
+     */
+    public static void cardMessage(Card pCard) {
+        if (pCard == null) {                                    // Make sure there is an existing card to display.
+            Alert e = new Alert(Alert.AlertType.WARNING);
+            e.setContentText("This card does not exist.");
+        } else {
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setContentText(pCard.toString());
+            a.showAndWait();
+        }
+
     }
 
     private void displayDeck () {
