@@ -56,22 +56,13 @@ public class DeckController {
     @FXML
     protected void onShowButtonClick() {
         for (Card card : this.aDeck) {
-            showCard(card);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Confirmation");
+            alert.setContentText(card.toString());
+
+            alert.showAndWait();
         }
-    }
-
-    /**
-     * Displays a card in an alert popup.
-     *
-     * @param card The card to be displayed.
-     */
-    private void showCard(Card card) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Confirmation");
-        alert.setHeaderText("Confirmation");
-        alert.setContentText(card.toString());
-
-        alert.showAndWait();
     }
 
     /**

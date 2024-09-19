@@ -61,18 +61,18 @@ public class Card implements Comparable<Card> {
      * Compares this card with another card for order.
      * The comparison is first based on suit, and if the suits are equal, then on rank.
      *
-     * @param o The card to be compared.
+     * @param pCardToCompare The card to be compared.
      * @return A negative integer, zero, or a positive integer if this card is less than,
      *         equal to, or greater than the specified card.
      */
     @Override
-    public int compareTo(Card o) {
-        int comparison = this.getSuit().compareTo(o.getSuit());
+    public int compareTo(Card pCardToCompare) {
+        int comparison = this.getSuit().compareTo(pCardToCompare.getSuit());
 
         if (comparison != 0) {
             return comparison;
         }
 
-        return this.getRank().compareTo(o.getRank());
+        return this.getRank().compareTo(pCardToCompare.getRank());
     }
 }
