@@ -2,9 +2,10 @@ package com.champlain.oop2assignment2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
-public class Deck implements CardSource {
+public class Deck implements CardSource, Iterable<Card> {
     private final List<Card> aCards = new ArrayList<>();
 
     public Deck() {
@@ -16,10 +17,21 @@ public class Deck implements CardSource {
     }
 
     public void shuffle() {
-        Collections.shuffle(this.aCards);
+        if (aCards.isEmpty()) {
+            throw new IllegalStateException("Can't shuffle an empty deck");
+        }
+        Collections.shuffle(aCards);
+    }
+
+    public void sort () {
+        Collections.sort(this.aCards);
     }
 
     public Card draw() {
+        if (aCards.isEmpty()) {
+            throw new IllegalStateException(" Can't draw from an empty deck");
+
+        }
         int last = this.aCards.size()-1;
         Card myCard = this.aCards.get(last);
         this.aCards.remove(last);
@@ -28,6 +40,11 @@ public class Deck implements CardSource {
 
     public boolean isEmpty() {
         return this.aCards.isEmpty();
+    }
+
+    @Override
+    public Iterator<Card> iterator() {
+        return this.aCards.iterator();
     }
 
     public String toString() {
