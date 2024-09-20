@@ -15,7 +15,10 @@ public class DeckController {
         this.displayDeck();
     }
 
-
+    /**
+     * Shuffle the cards in the deck.
+     * The method will be called when the shuffle button is clicked in SceneBuilder.
+     */
     @FXML
     protected void onShuffleButtonClick() {
         this.aDeck.shuffle();
@@ -23,6 +26,10 @@ public class DeckController {
     }
 
 
+    /**
+     * Sorts the cards in the deck in ascending order based on suit and rank.
+     * The method will be called when the sort button is clicked in SceneBuilder.
+     */
     @FXML
     protected void onSortButtonClick() {
         // this.aDeckTextArea.setText("This does not sort anything yet.");
@@ -30,7 +37,11 @@ public class DeckController {
         this.displayDeck();
     }
 
-
+    /**
+     * Shows each card in the deck one by one in confirmation alerts.
+     * This method is called when the show button is clicked in SceneBuilder.
+     * The cards are displayed in the order they are sorted or shuffled in the deck.
+     */
     @FXML
     protected void onShowButtonClick() {
         // Iterate through each card in the deck one by one

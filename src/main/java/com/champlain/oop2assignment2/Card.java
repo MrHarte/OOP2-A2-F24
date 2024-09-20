@@ -1,6 +1,8 @@
 package com.champlain.oop2assignment2;
 
-
+/**
+ * The card class Implements the {@link Comparable} interface and compare cards by their suit and rank.
+ */
 public class Card implements Comparable<Card>{
     private final Suit aSuit;
 
@@ -26,7 +28,11 @@ public class Card implements Comparable<Card>{
         return this.aRank + " of " + this.aSuit;
     }
 
-
+    /**
+     * This method sort by suit first from lowest to highest and then by rank.
+     * @param otherCard the object to be compared.
+     * @return if the card is less than other card it will
+     */
     @Override
     public int compareTo(Card otherCard) {
         int suitComparison = this.aSuit.compareTo(otherCard.aSuit);
