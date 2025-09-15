@@ -1,13 +1,22 @@
 package com.champlain.oop2assignment2;
 
-public class Card {
+public class Card implements Comparable<Card> {
+//    Attributes
     private final Suit aSuit;
 
     private final Rank aRank;
 
+//    Constructor
     public Card (Rank pRank, Suit pSuit) {
         this.aRank = pRank;
         this.aSuit = pSuit;
+    }
+
+    public int compareTo(Card pCard) {
+        if (this.aSuit.compareTo(pCard.aSuit) == 0) {
+            return this.aRank.compareTo(pCard.aRank);
+        }
+        return this.aSuit.compareTo(pCard.aSuit);
     }
 
     public Rank getRank() {
