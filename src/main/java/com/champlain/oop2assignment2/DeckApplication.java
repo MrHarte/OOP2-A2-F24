@@ -17,7 +17,5 @@ public class DeckApplication extends Application {
         pStage.show();
     }
 
-    public static void main(String[] pArgs) {
-        launch();
-    }
+    public static void main(String[] pArgs) {launch();}
 }
