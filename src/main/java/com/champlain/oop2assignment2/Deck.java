@@ -17,13 +17,18 @@ public class Deck implements CardSource {
 
     public void shuffle() {
         Collections.shuffle(this.aCards);
-    }
+    };
+
 
     public Card draw() {
         int last = this.aCards.size()-1;
         Card myCard = this.aCards.get(last);
         this.aCards.remove(last);
         return myCard;
+    }
+
+    public void sort() {
+        Collections.sort(this.aCards);
     }
 
     public boolean isEmpty() {
