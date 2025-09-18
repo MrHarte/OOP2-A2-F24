@@ -1,5 +1,6 @@
 package com.champlain.oop2assignment2;
 
+import java.util.Collections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
@@ -29,7 +30,16 @@ public class DeckController {
         this.aDeckTextArea.setText("This does not step through anything yet.");
     }
 
-    private void displayDeck () {
+    private void displayDeck() {
         this.aDeckTextArea.setText(this.aDeck.toString());
+    }
+}
+
+class Deck {
+    // Deck implementation
+
+    public void shuffle() {
+        // Add logic to shuffle the deck, e.g., if you have a List<Card> cards;
+        // Collections.shuffle(cards);
     }
 }

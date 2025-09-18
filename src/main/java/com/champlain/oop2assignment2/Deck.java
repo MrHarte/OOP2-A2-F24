@@ -2,39 +2,32 @@ package com.champlain.oop2assignment2;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
-public class Deck implements CardSource {
-    private final List<Card> aCards = new ArrayList<>();
+public class Deck {
+    private ArrayList<Card> cards;
 
     public Deck() {
-        for (Rank currentRank : Rank.values()) {
-            for (Suit currentSuit : Suit.values()) {
-                this.aCards.add(new Card(currentRank, currentSuit));
+        cards = new ArrayList<>();
+        String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
+        String[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+        for (String suit : suits) {
+            for (String rank : ranks) {
+                cards.add(new Card(suit, rank));
             }
         }
     }
 
-    public void shuffle() {
-        Collections.shuffle(this.aCards);
+    public void sortDeck() {
+        Collections.sort(cards);
     }
 
-    public Card draw() {
-        int last = this.aCards.size()-1;
-        Card myCard = this.aCards.get(last);
-        this.aCards.remove(last);
-        return myCard;
-    }
-
-    public boolean isEmpty() {
-        return this.aCards.isEmpty();
-    }
-
-    public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (Card currentCard : this.aCards) {
-            result.append(currentCard.toString()).append("\n");
+    public void printDeck() {
+        for (Card card : cards) {
+            System.out.println(card);
         }
-        return result.toString();
+    }
+
+    public ArrayList<Card> getCards() {
+        return cards;
     }
 }
