@@ -13,6 +13,8 @@ public interface CardSource {
      */
     Card draw();
 
+
+
     /**
      *
      * @return True if there is no card in the source.
