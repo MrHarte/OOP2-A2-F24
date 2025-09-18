@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.ResourceBundle;
 
 public class DeckApplication extends Application {
     @Override
@@ -17,7 +19,8 @@ public class DeckApplication extends Application {
         pStage.show();
     }
 
-    public static void main(String[] pArgs) {
-        launch();
-    }
+    public static void main(String[] pArgs) {launch();}
+
+
+
 }
