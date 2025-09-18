@@ -5,7 +5,8 @@ package com.champlain.oop2assignment2;
  * Allows the user to draw from it and check if it is empty.
  */
 public interface CardSource {
-    /**+
+    /**
+     * +
      * Returns a card from the source.
      *
      * @return The next available card.
@@ -14,7 +15,6 @@ public interface CardSource {
     Card draw();
 
     /**
-     *
      * @return True if there is no card in the source.
      */
     boolean isEmpty();
